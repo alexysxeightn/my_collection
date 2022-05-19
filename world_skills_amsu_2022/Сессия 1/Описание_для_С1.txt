@@ -1,0 +1,62 @@
+Файл Outcomes.txt содержит следующую информацию:
+	RecordID - уникальный идентификационный номер пациента
+	Survival - целевая переменная, содержит информацию сколько дней прожил пациент после попадания в отделение интенсивной терапии (например, 575б 918, 5 и т. д.), -1 означает что пациент жив до сих пор.
+	In-hospital_death - целевая переменная, содержит информацию умер человек в отделение интенсивной терапии (1) или нет (0).
+
+Архив set.rar содержит 8000 файлов, каждый файл соответствует одного пуциенту, название файла отражает уникальный идентификационный номер пациента, например 132539.txt содержит информацию про пациента с RecordID равным 132539.
+
+Каждый такой файл содержит следующую информацию:
+	Time - время снятия какого-либо параметра пациента.
+	Parameter - название параметра пациента.
+	Value - значение параметра пациента.
+
+Параметры пациентов делятся на общие и времянные ряды.
+Общие параметры это - шесть параметров, которые собираются во время поступления пациента в отделение интенсивной терапии. Связанные с ними отметки времени установлены на 00:00 (таким образом, они появляются в начале каждой записи пациента). Общими параметрами являются:
+	RecordID - уникальный идентификационный номер пациента.
+	Age - возраст пациента в годах.
+	Gender - пол пациента (0: female, or 1: male).
+	Height - рост пациента в сантиметрах.
+	ICUType - тип отделения интенсивной терапии куда был доставлен пациент (1: Coronary Care Unit, 2: Cardiac Surgery Recovery Unit, 3: Medical ICU, or 4: Surgical ICU).
+	Weight - вес пациента в киллограммах (Обратите внимание, что вес является как общим дескриптором (записывается при поступлении), так и переменной временного ряда (часто измеряется ежечасно для оценки баланса жидкости)).
+
+Времянные ряды - это информация о пациента полученная с различных датчиков, всего датчиков существует 37 видов (эти 37 параметров могут наблюдаться один раз, более одного раза или не наблюдаться вообще в некоторых случаях). Измерения временных рядов записываются в хронологическом порядке в каждой записи, а соответствующие отметки времени указывают время, прошедшее с момента поступления в отделение интенсивной терапии. Измерения могут регистрироваться с регулярными интервалами, от ежечасного до ежедневного, или с нерегулярными интервалами по мере необходимости. Не все временные ряды доступны во всех случаях. В некоторых случаях, например, при артериальном давлении, различные измерения, выполненные с использованием двух или более методов или датчиков, могут быть записаны с одинаковыми или лишь немного разными временными метками. Также следует ожидать случайных выбросов.
+
+Виды параметров:
+	Albumin (g/dL).
+	ALP [Alkaline phosphatase (IU/L)].
+	ALT [Alanine transaminase (IU/L)].
+	AST [Aspartate transaminase (IU/L)].
+	Bilirubin (mg/dL).
+	BUN [Blood urea nitrogen (mg/dL)].
+	Cholesterol (mg/dL).
+	Creatinine [Serum creatinine (mg/dL)].
+	DiasABP [Invasive diastolic arterial blood pressure (mmHg)].
+	FiO2 [Fractional inspired O2 (0-1)].
+	GCS [Glasgow Coma Score (3-15)].
+	Glucose [Serum glucose (mg/dL)].
+	HCO3 [Serum bicarbonate (mmol/L)].
+	HCT [Hematocrit (%)].
+	HR [Heart rate (bpm)].
+	K [Serum potassium (mEq/L)].
+	Lactate (mmol/L).
+	Mg [Serum magnesium (mmol/L)].
+	MAP [Invasive mean arterial blood pressure (mmHg)].
+	MechVent [Mechanical ventilation respiration (0:false, or 1:true)].
+	Na [Serum sodium (mEq/L)].
+	NIDiasABP [Non-invasive diastolic arterial blood pressure (mmHg)].
+	NIMAP [Non-invasive mean arterial blood pressure (mmHg)].
+	NISysABP [Non-invasive systolic arterial blood pressure (mmHg)].
+	PaCO2 [partial pressure of arterial CO2 (mmHg)].
+	PaO2 [Partial pressure of arterial O2 (mmHg)].
+	pH [Arterial pH (0-14)].
+	Platelets (cells/nL).
+	RespRate [Respiration rate (bpm)].
+	SaO2 [O2 saturation in hemoglobin (%)].
+	SysABP [Invasive systolic arterial blood pressure (mmHg)].
+	Temp [Temperature (°C)].
+	TropI [Troponin-I (μg/L)].
+	TropT [Troponin-T (μg/L)].
+	Urine [Urine output (mL)].
+	WBC [White blood cell count (cells/nL)].
+	Weight (kg).
+
